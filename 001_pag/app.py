@@ -1,17 +1,10 @@
 import web
 
-# Define los URLs
 urls = (
     "/", "Index",
     "/lista_personas", "ListaPersonas",
     "/personas/list", "GetPersonas"  
 )
-
-
-personas = [
-    {"id": "001", "nombre": "Deyah", "email": "deyah@email"},
-    {"id": "002", "nombre": "Soha", "email": "soha@email"}
-]
 
 app = web.application(urls, globals())
 render = web.template.render("views", base="master")
