@@ -1,21 +1,16 @@
-<h1>Lista de personas</h1>
-<a href="/InsertarPersonas"> Insertar personas</a>
+$def with (datos)
 
-$def with (datos)  
+<h2>Lista de Personas</h2>
+$for key, persona in datos.items():
+    $key
+<table id="personas-table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>nombre</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<table>
-    <thead>
-        <tr>
-            <th>id</th>
-            <th>nombre</th>
-        </tr>   
-    </thead>
-    
-    <tbody>
-        $for persona in datos:
-            <tr>
-                <td>${persona['id']}</td> 
-                <td>${persona['nombre']}</td>
-            </tr>
-    </tbody>
+  </tbody>
 </table>

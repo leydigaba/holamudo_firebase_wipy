@@ -14,7 +14,6 @@ urls = (
 app = web.application(urls, globals()) 
 
 
-
 def error_handler():
     return web.internalerror("Ocurrió un error en el servidor. Intenta nuevamente.")
 

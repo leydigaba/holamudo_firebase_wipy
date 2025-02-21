@@ -1,4 +1,3 @@
-
 import pyrebase
 
 config = {
@@ -17,12 +16,14 @@ class Personas:
 
     def lista_personas(self):
         try:
-            personas = db.child("personas").get()
-            return {
+            datos = db.child("personas").get() #extre "personas de la base de datos y lasguerda en datos"
+            #se genera un diccionario con un status, un mensaje, y los datos que se obtuvieron de firebase
+            resultado= {
                 "status": 200,
                 "mensaje": "Todo bien",
-                "personas": dict(personas.val()) if personas.val() else {}
+                "personas": dict(datos.val()) if datos.val() else {}
             }
+            return resultado #nos va a devolver el resultado del diccionario
         except Exception as e:
             return {
                 "status": 500,

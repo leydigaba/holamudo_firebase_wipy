@@ -2,7 +2,7 @@ import web
 
 render = web.template.render("views/personas", base="master")
 
-class InsertarPersonas:
+class InsertarPersonas: 
     def GET(self):
         return render.insertar_personas()
     
